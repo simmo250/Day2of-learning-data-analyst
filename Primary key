@@ -1,0 +1,16 @@
+CREATE DATABASE mysqlclass1; 
+use mysqlclass1; 
+create table student_table0(
+studentid int primary key,
+student_name varchar(50),
+course_name varchar(50)
+); 
+show tables; 
+describe student_table0;
+
+create table orders(
+order_id int,
+customer_id int,
+order_date date,
+foreign key(customer_id) references student_table0(studentid));  
+describe orders;
